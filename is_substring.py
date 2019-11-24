@@ -1,5 +1,5 @@
-string = input("")
-substring = input("")
+string = input("str")
+substring = input("str")
 
 def is_substring(substring, string):
     index = 0
