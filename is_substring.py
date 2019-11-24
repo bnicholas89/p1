@@ -1,7 +1,6 @@
 string = input("")
-sub = input("")
+substring = input("")
 
-def is_substring(sub, str):
-    if string[]:
-        return True
-
+def is_substring(substring, string):
+    for index in range(len(string)):
+        print(index)
