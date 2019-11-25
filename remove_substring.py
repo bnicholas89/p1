@@ -1,5 +1,3 @@
-n = input("")
-
 def remove_substring(string, substring):
     output = []
     index = 0
