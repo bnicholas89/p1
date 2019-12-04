@@ -13,6 +13,10 @@ def silly_string(nouns, verbs, templates):
     index = 0
 
     # Add a while loop here.
+while index < len(silly_string):
+    if silly_string[index:index + len(silly_string)] == substring:
+        output.append(replacement)
+        index += len(silly_string)
 
     # After the loop has finished, join the output and return it.
 
