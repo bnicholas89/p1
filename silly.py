@@ -12,13 +12,24 @@ def silly_string(nouns, verbs, templates):
     # Keep track of where in the template string we are.
     index = 0
 
-    # Add a while loop here.
-while index < len(silly_string):
-    if silly_string[index:index + len(silly_string)] == substring:
-        output.append(replacement)
-        index += len(silly_string)
+    while index < len(template):
+        if template[index:index+8] == '{{noun}}':
+            # Add a random noun to the output.
+            output.append(random.choice(nouns))
+            index += 8
+        elif template[index:index+8] == '{{verb}}':
+            # Add a random verb to the output.
+            output.append(random.choice(verbs))
+            index += 8
+        else:
+            # Copy a character to the output.
+            output.append(template[index])
+            index += 1
 
-    # After the loop has finished, join the output and return it.
+    # Join the output into a single string.
+    output = ''.join(output)
+
+    return output
 
 
 if __name__ == '__main__':
