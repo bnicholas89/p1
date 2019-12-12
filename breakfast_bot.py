@@ -6,15 +6,13 @@ def print_pause(message_to_print):
     time.sleep(2)
 
 
-def valid_input(prompt, option1, option2):
+def valid_input(prompt, options):
     while True:
         response = input(prompt).lower()
-        if option1 in response:
-            return response
-        elif option2 in response:
-            return response
-        else:
-            print_pause("Sorry, I don't understand.")
+        for option in options:
+            if option in response:
+                return response
+        print_pause("Sorry, I don't understand.")
 
 
 print_pause("Hello! I am Bob, the Breakfast Bot.")
