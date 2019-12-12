@@ -17,11 +17,13 @@ def valid_input(prompt, option1, option2):
             print_pause("Sorry, I don't understand.")
     return response
 
+
 def intro():
     print_pause("Hello! I am Bob, the Breakfast Bot.")
     print_pause("Today we have two breakfasts available.")
     print_pause("The first is waffles with strawberries and whipped cream.")
     print_pause("The second is sweet potato pancakes with butter and syrup.")
+
 
 def get_order():
     response = valid_input("Please place your order. "
@@ -31,17 +33,20 @@ def get_order():
         print_pause("Waffles it is!")
     elif "pancakes" in response:
         print_pause("Pancakes it is!")
-
-intro()
-while True:
-
-    get_order()
     print_pause("Your order will be ready shortly.")
-    order_again = valid_input("Would you like to place another order? "
+
+
+def order_again():
+    response = valid_input("Would you like to place another order? "
                               "Please say 'yes' or 'no'.\n",
                               "yes", "no")
-    if "no" in order_again:
+    if "no" in response:
         print_pause("OK, goodbye!")
-        break
-    elif "yes" in order_again:
+    elif "yes" in response:
         print_pause("Very good, I'm happy to take another order.")
+        get_order()
+
+
+intro()
+get_order()
+order_again()
