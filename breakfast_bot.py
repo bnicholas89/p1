@@ -1,10 +1,8 @@
 import time
 
-
 def print_pause(message_to_print):
     print(message_to_print)
     time.sleep(2)
-
 
 def valid_input(prompt, option1, option2):
     while True:
@@ -17,13 +15,11 @@ def valid_input(prompt, option1, option2):
             print_pause("Sorry, I don't understand.")
     return response
 
-
 def intro():
     print_pause("Hello! I am Bob, the Breakfast Bot.")
     print_pause("Today we have two breakfasts available.")
     print_pause("The first is waffles with strawberries and whipped cream.")
     print_pause("The second is sweet potato pancakes with butter and syrup.")
-
 
 def get_order():
     response = valid_input("Please place your order. "
@@ -34,7 +30,6 @@ def get_order():
     elif "pancakes" in response:
         print_pause("Pancakes it is!")
     print_pause("Your order will be ready shortly.")
-
 
 def order_again():
     response = valid_input("Would you like to place another order? "
