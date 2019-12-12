@@ -41,7 +41,11 @@ def order_again():
         print_pause("Very good, I'm happy to take another order.")
         get_order()
 
+def order_breakfast():
+    intro()
+    get_order()
+    order_again()
 
-intro()
-get_order()
-order_again()
+order_breakfast()
+
+
