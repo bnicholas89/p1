@@ -2,7 +2,7 @@ import time
 
 def print_pause(message_to_print):
     print(message_to_print)
-    time.sleep(2)
+    time.sleep(1)
 
 print_pause("You have just arrived at your new job!")
 print_pause("You are in the elevator.")
