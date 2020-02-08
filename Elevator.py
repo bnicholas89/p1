@@ -6,8 +6,9 @@ def print_pause(message_to_print):
     time.sleep(1)
 
 
-print_pause("You have just arrived at your new job!")
-print_pause("You are in the elevator.")
+def intro():
+    print_pause("You have just arrived at your new job!")
+    print_pause("You are in the elevator.")
 
 
 def first_floor():
@@ -23,8 +24,7 @@ def first_floor():
                     "card.")
         items.append("ID card")
     print_pause("You head back to the elevator.")
-
-    ride_elevator()  # Added a call here.
+    ride_elevator()
 
 
 def second_floor():
@@ -44,8 +44,7 @@ def second_floor():
             print_pause("He has something for you, but says he can't "
                         "give it to you until you go get your ID card.")
     print_pause("You head back to the elevator.")
-
-    ride_elevator()  # Added a call here.
+    ride_elevator()
 
 
 def third_floor():
@@ -60,7 +59,7 @@ def third_floor():
                     "employee handbook in order to start work.")
         if "handbook" in items:
             print_pause("Fortunately, you got that from HR!")
-            print_pause("Congratulatons! You are ready to start your new job "
+            print_pause("Congratulations! You are ready to start your new job "
                         "as vice president of engineering!")
         else:
             print_pause("They scowl when they see that you don't have it, "
@@ -72,8 +71,7 @@ def third_floor():
         print_pause("It looks like you need some kind of "
                     "key card to open the door.")
         print_pause("You head back to the elevator.")
-
-        ride_elevator()  # Added a call here.
+        ride_elevator()
 
 
 def ride_elevator():
@@ -90,4 +88,5 @@ def ride_elevator():
         third_floor()
 
 
+intro()
 ride_elevator()
